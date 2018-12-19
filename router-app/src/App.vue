@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <header-nav></header-nav>
+    <header-nav :funds="currentFunds"></header-nav>
     <router-view transition="fade" mode="out-in"></router-view>
   </div>
 </template>
@@ -12,6 +12,11 @@
     components: {
       HeaderNav,
       Dashboard
+    },
+    computed: {
+        currentFunds() {
+          return this.$store.getters.current_funds
+        }
     }
   }
 </script>

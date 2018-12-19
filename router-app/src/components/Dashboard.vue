@@ -1,18 +1,24 @@
 <template>
     <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 class="display-4">Trade or View your Portfolio</h1>
+        <p class="lead">You may Save & Load your Data</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
+        <p>Click on 'End Day' to begin a new Day!</p>
+        <h4 class="lead">
+              Your funds: ${{ currentFunds }}
+        </h4>
     </div>
 </template>
 
 <script>
     export default {
-        name: "Dashboard"
+        name: "Dashboard",
+      props: ['Funds'],
+      computed: {
+        currentFunds() {
+          return this.$store.getters.current_funds
+        }
+      }
     }
 </script>
 

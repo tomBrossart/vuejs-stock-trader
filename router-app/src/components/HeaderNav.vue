@@ -29,7 +29,10 @@
                         </li>
                         <li class="nav-item">
                                 <a class="nav-link" href="#">End Day</a>
-                            </li>
+                          </li>
+                        <li class="nav-item funds">
+                          Current funds are: {{ funds }}
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -38,10 +41,13 @@
 
 <script>
     export default {
-        name: "HeaderNav"
+        name: "HeaderNav",
+      props: ['funds']
     }
 </script>
 
 <style scoped>
-
+    .funds {
+      color: white
+    }
 </style>
