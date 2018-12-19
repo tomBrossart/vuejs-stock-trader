@@ -2,28 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="391fa63a-8904-4b1f-8bd5-a8c133cadbb8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/router-app/.babelrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/.postcssrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/src/App.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/src/components/HelloWorld.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/src/components/Portfolio.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/src/components/Stocks.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/src/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router-app/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dashboard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/router-app/src/components/Dashboard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HeaderNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/router-app/src/components/HeaderNav.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/router-app/src/components/HeaderNav.vue" beforeDir="false" afterPath="$PROJECT_DIR$/router-app/src/components/HeaderNav.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router-app/src/components/Portfolio.vue" beforeDir="false" afterPath="$PROJECT_DIR$/router-app/src/components/Portfolio.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router-app/src/components/Stocks.vue" beforeDir="false" afterPath="$PROJECT_DIR$/router-app/src/components/Stocks.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router-app/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router-app/src/router/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,14 +30,14 @@
           <entry key="JSON" value="2" />
           <entry key="JavaScript" value="4" />
           <entry key="TypeScript" value="2" />
-          <entry key="Vue.js" value="7" />
+          <entry key="Vue.js" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="11" />
-          <entry key="JavaScript" value="376" />
-          <entry key="Vue.js" value="587" />
+          <entry key="JavaScript" value="392" />
+          <entry key="Vue.js" value="734" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -92,14 +74,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/router-app/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="330">
+              <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/router-app/src/components/Stocks.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/router-app/src/components/Portfolio.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -109,6 +109,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/router-app/src/components/HeaderNav.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="80" selection-start-line="3" selection-start-column="80" selection-end-line="3" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -145,6 +154,9 @@
         <option value="$PROJECT_DIR$/router-app/src/App.vue" />
         <option value="$PROJECT_DIR$/router-app/index.html" />
         <option value="$PROJECT_DIR$/router-app/src/router/index.js" />
+        <option value="$PROJECT_DIR$/router-app/src/components/Portfolio.vue" />
+        <option value="$PROJECT_DIR$/router-app/src/components/Stocks.vue" />
+        <option value="$PROJECT_DIR$/router-app/src/components/HeaderNav.vue" />
       </list>
     </option>
   </component>
@@ -253,12 +265,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1545243578660</updated>
-      <workItem from="1545243580107" duration="6334000" />
+      <workItem from="1545243580107" duration="7019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6334000" />
+    <option name="totallyTimeSpent" value="7019000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -346,13 +358,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/router-app/src/App.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -394,13 +399,41 @@
         <state relative-caret-position="-510" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/router-app/src/App.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router-app/src/components/Portfolio.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="51" selection-start-line="3" selection-start-column="51" selection-end-line="3" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router-app/src/components/Stocks.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/router-app/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="330">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/router-app/src/components/HeaderNav.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="80" selection-start-line="3" selection-start-column="80" selection-end-line="3" selection-end-column="80" />
         </state>
       </provider>
     </entry>

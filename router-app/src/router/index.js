@@ -12,21 +12,21 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    },
-    {
-      path: '/',
       name: 'Dashboard',
       component: Dashboard
     },
     {
-      path: '/',
+      path: '/dashboard',
+      name: 'Dashboard',
+      component: Dashboard
+    },
+    {
+      path: '/portfolio',
       name: 'Portfolio',
       component: Portfolio
     },
     {
-      path: '/',
+      path: '/stocks',
       name: 'Stocks',
       component: Stocks
     },
