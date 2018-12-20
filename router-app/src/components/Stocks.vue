@@ -1,13 +1,30 @@
 <template>
-    <div class="jumbotron">
-        <h1 class="display-4">Stocks!</h1>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    <div class="container">
+      <app-stock v-for="stock in stocks" :stock="stock"></app-stock>
     </div>
 </template>
 
 <script>
+    import Stock from './Stock.vue'
+
     export default {
-        name: "Dashboard"
+      name: "Stocks",
+      components: {
+        appStock: Stock
+      },
+      data() {
+          return {
+          }
+      },
+      props: [
+        'gmPrice',
+
+      ],
+      computed: {
+        stocks() {
+          return this.$store.getters.stocks
+        }
+      }
     }
 </script>
 

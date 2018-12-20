@@ -13,6 +13,9 @@
       HeaderNav,
       Dashboard
     },
+    created() {
+      this.$store.dispatch('initStocks');
+    },
     computed: {
         currentFunds() {
           return this.$store.getters.current_funds

@@ -28,7 +28,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                                <a class="nav-link" href="#">End Day</a>
+                                <a class="nav-link" @click="end_day">End Day</a>
                           </li>
                         <li class="nav-item funds">
                           Current funds are: {{ funds }}
@@ -42,8 +42,13 @@
 <script>
     export default {
         name: "HeaderNav",
-      props: ['funds']
-    }
+      props: ['funds'],
+    methods: {
+      end_day() {
+        this.$store.dispatch('endDay')
+      }
+    },
+};
 </script>
 
 <style scoped>

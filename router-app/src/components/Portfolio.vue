@@ -1,19 +1,28 @@
 <template>
-    <div class="jumbotron">
-        <h1 class="display-4">Portfolio!</h1>
-        <p class="lead">This is the portfolio page!</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
-    </div>
+  <div class="container">
+    <port-stock v-for="stock in portfolio" :stock="stock"></port-stock>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "Dashboard"
+  import PortfolioStock from './PortfolioStock.vue'
+
+  export default {
+    name: "Portfolio",
+    components: {
+      portStock: PortfolioStock
+    },
+    data() {
+      return {
+      }
+    },
+    computed: {
+      portfolio() {
+        return this.$store.getters.stockPortfolio
+        console.log("portfolio is", this.$store.getters.stockPortfolio)
+      }
     }
+  }
 </script>
 
 <style scoped>
