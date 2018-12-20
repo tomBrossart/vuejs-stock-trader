@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
     <header-nav :funds="currentFunds"></header-nav>
     <router-view transition="fade" mode="out-in"></router-view>
   </div>

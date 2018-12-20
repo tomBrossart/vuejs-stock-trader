@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <port-stock v-for="stock in portfolio" :stock="stock"></port-stock>
+      <div class="row">
+        <h1 v-if="portfolio.length == 0" class="mt-4"> Buy some stocks and see them displayed here! </h1>
+        <port-stock class="col-lg-6" v-for="stock in portfolio" :stock="stock"></port-stock>
+      </div>
   </div>
 </template>
 

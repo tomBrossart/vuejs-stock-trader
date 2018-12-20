@@ -1,29 +1,33 @@
 <template>
-  <div class="col-sm-6 col-md-4">
-    <div class="panel panel-success">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          {{ stock.name }}
-          <small>(Price: {{ stock.price }})</small>
-        </h3>
-      </div>
-      <div class="panel-body">
-        <div class="pull-left">
-          <input
-            type="number"
-            class="form-control"
-            placeholder="Quantity"
-            v-model="quantity"
-            :class="{danger: insufficientFunds}"
-          >
+  <div class="col-sm-6 col-md-5 mt-4">
+    <div class="card bg-light">
+      <div class="card-header">
+        <div class="row">
+          <h3 class="card-title ml-1 mr-auto">
+            {{ stock.name }}
+          </h3>
+          <p class="ml-auto mt-1">(Price: {{ stock.price }})</p>
         </div>
-        <div class="pull-right">
-          <button
-            class="btn btn-success"
-            @click="buyStock"
-            :disabled="insufficientFunds || quantity <= 0 || Number.isInteger(quantity)"
+      </div>
+      <div class="card-body w-100">
+        <div class="row">
+          <div class="mr-auto ml-2">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Quantity"
+              v-model="quantity"
+              :class="{danger: insufficientFunds}"
+            >
+          </div>
+          <div class="ml-auto">
+            <button
+              class="btn btn-success"
+              @click="buyStock"
+              :disabled="insufficientFunds || quantity <= 0 || Number.isInteger(quantity)"
             >{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
