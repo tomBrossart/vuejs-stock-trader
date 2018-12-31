@@ -4,8 +4,24 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import {store} from './vuex/store'
+import VueCurrencyFilter from 'vue-currency-filter'
+import VueResource from 'vue-resource'
 
-Vue.config.productionTip = false
+
+Vue.config.productionTip = false;
+Vue.use(VueResource);
+Vue.http.options.root = 'https://tomtests-38c25.firebaseio.com/'
+
+
+Vue.use(VueCurrencyFilter,
+  {
+    symbol : '$',
+    thousandsSeparator: ',',
+    fractionCount: 2,
+    fractionSeparator: '.',
+    symbolPosition: 'front',
+    symbolSpacing: true
+  })
 
 /* eslint-disable no-new */
 new Vue({

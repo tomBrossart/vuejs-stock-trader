@@ -1,5 +1,5 @@
 <template>
-  <div class="col-sm-6 col-md-5 mt-4">
+  <div class="col-sm-6 col-md-5 mt-4" v-if="stock.quantity > 0">
     <div class="card bg-light">
       <div class="card-header">
         <div class="row">
@@ -23,7 +23,7 @@
           <button
             class="btn btn-warning"
             @click="sellStock"
-            :disabled="insufficientFunds || quantity <= 0 || Number.isInteger(quantity)"
+            :disabled="quantity <= 0 || Number.isInteger(quantity)"
           > Sell
           </button>
         </div>
@@ -51,9 +51,6 @@
       funds() {
         return this.$store.getters.current_funds;
       },
-      insufficientFunds() {
-        return this.quantity * this.stock.price > this.funds;
-      }
     },
     methods: {
       sellStock() {

@@ -16,7 +16,7 @@ export const store = new Vuex.Store({
       return state.funds
     },
     stocks: state => {
-      return state.stocks = stocks
+      return state.stocks
     },
     stockPortfolio (state, getters) {
       return state.portfolioStocks.map(stock => {
@@ -31,8 +31,8 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    'SET_STOCKS' (state, stocks) {
-      state.stocks = stocks;
+    'SET_STOCKS' (state, portfolio) {
+      state.stocks = portfolio.stocksss;
     },
     'RND_STOCKS' (state) {
 
@@ -52,7 +52,7 @@ export const store = new Vuex.Store({
     },
     'SELL_STOCK' (state, {stockId, quantity, stockPrice}) {
       const record = state.portfolioStocks.find(element => element.id == stockId)
-      if (record.quantity > quantity) {
+      if (record.quantity >= quantity) {
         record.quantity -= quantity;
       } else {
         state.stocks.splice(state.portfolioStocks.indexOf(record), 1)
@@ -71,15 +71,20 @@ export const store = new Vuex.Store({
         }
         console.log("ending day", stock.price)
       })
+    },
+    'LOAD_DATA' (state, portfolio) {
+      state.funds = portfolio.funds
+      state.stocks = portfolio.stocksss;
+      state.portfolioStocks = portfolio.portfolioStocks ? portfolio.portfolioStocks : [];
     }
   },
   actions: {
     buyStock: ({commit}, order) => {
       commit('BUY_STOCK', order);
     },
-    initStocks: ({commit}) => {
-      commit('SET_STOCKS')
-    },
+    // initStocks: ({commit}) => {
+    //   commit('SET_STOCKS')
+    // },
     randomizeStocks: ({commit}) => {
         commit('RND_STOCKS')
     },
@@ -88,6 +93,29 @@ export const store = new Vuex.Store({
       },
     endDay: ({commit}) => {
       commit('END_DAY')
+    },
+    loadData: ({commit}) => {
+      Vue.http.get('data.json').then(response => response.json())
+        .then((data, err) => {
+        if(err) {
+          console.log("error here!", err)
+        }
+        if(data) {
+          console.log("jsonified response is", data)
+         const funds = data.funds;
+          const stocksss = data.stocks;
+          const portfolioStocks = data.portfolioStocks;
+
+          const portfolio = {
+            portfolioStocks,
+            stocksss,
+            funds
+          }
+
+        commit('LOAD_DATA', portfolio);
+        commit('SET_STOCKS', portfolio)
+        }
+      })
     }
   }
 });
