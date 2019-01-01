@@ -16,14 +16,14 @@
             class="ml-2 mr-auto form-control"
             placeholder="Quantity"
             v-model="quantity"
-            :class="{danger: insufficientFunds}"
+            :class="{danger: quantity > stock.quantity}"
           >
         </div>
         <div class="ml-auto">
           <button
             class="btn btn-warning"
             @click="sellStock"
-            :disabled="quantity <= 0 || Number.isInteger(quantity)"
+            :disabled="quantity > stock.quantity || quantity <= 0 || Number.isInteger(quantity)"
           > Sell
           </button>
         </div>

@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div class="container-fluid">
       <div class="row">
         <h1 v-if="portfolio.length == 0" class="mt-4"> Buy some stocks and see them displayed here! </h1>
-        <port-stock class="col-lg-6" v-for="stock in portfolio" :stock="stock"></port-stock>
+        <port-stock class="col-lg-6" v-for="item in portfolio" :stock="item" :key="item.id"></port-stock>
       </div>
   </div>
 </template>

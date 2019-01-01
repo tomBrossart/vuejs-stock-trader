@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex'
-import stocks from '../data/stocks';
+import placeholderStocks from '../data/stocks';
 
 Vue.use(Vuex);
 
@@ -16,7 +16,7 @@ export const store = new Vuex.Store({
       return state.funds
     },
     stocks: state => {
-      return state.stocks
+      return state.stocks ? state.stocks : placeholderStocks
     },
     stockPortfolio (state, getters) {
       return state.portfolioStocks.map(stock => {

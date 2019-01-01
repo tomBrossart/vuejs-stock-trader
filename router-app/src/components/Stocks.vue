@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
       <div class="row">
-        <app-stock class="col-lg-6" v-for="stock in stocks" :stock="stock"></app-stock>
+        <app-stock class="col-lg-6" v-for="stock in stocks" :stock="stock" :key="stock.id"></app-stock>
       </div>
     </div>
 </template>

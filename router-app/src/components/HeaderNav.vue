@@ -67,7 +67,8 @@
     },
     methods: {
       end_day() {
-        this.$store.dispatch('endDay')
+        this.$store.dispatch('endDay');
+        this.$snotify.success('Check out Stocks & Portfolio for updates', 'Day Ended!')
       },
       save_stocks() {
         console.log('save them stocks!');

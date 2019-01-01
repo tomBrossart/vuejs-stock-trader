@@ -1,12 +1,12 @@
 <template>
-  <div class="col-sm-6 col-md-5 mt-4">
-    <div class="card bg-light">
+  <div class="col-sm-12 col-md-6 mt-4">
+    <div class="card bg-primary text-white">
       <div class="card-header">
         <div class="row">
           <h3 class="card-title ml-1 mr-auto">
             {{ stock.name }}
           </h3>
-          <p class="ml-auto mt-1">(Price: {{ stock.price }})</p>
+          <p class="ml-auto mt-1 mr-2">(Price: {{ stock.price }})</p>
         </div>
       </div>
       <div class="card-body w-100">
@@ -16,15 +16,15 @@
               type="number"
               class="form-control"
               placeholder="Quantity"
-              v-model="quantity"
+              v-model.number="quantity"
               :class="{danger: insufficientFunds}"
             >
           </div>
           <div class="ml-auto">
             <button
-              class="btn btn-success"
+              class="btn btn-success mr-2 w-100"
               @click="buyStock"
-              :disabled="insufficientFunds || quantity <= 0 || Number.isInteger(quantity)"
+              :disabled="insufficientFunds || quantity <= 0 || !Number.isInteger(quantity)"
             >{{ insufficientFunds ? 'Insufficient Funds' : 'Buy' }}
             </button>
           </div>
@@ -59,7 +59,7 @@
     },
     methods: {
       buyStock() {
-        console.log("buy stock called");
+        console.log("Number.isInteger", Number.isInteger(this.quantity));
         const order = {
           stockId: this.stock.id,
           stockPrice: this.stock.price,

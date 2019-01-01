@@ -6,12 +6,23 @@ import router from './router'
 import {store} from './vuex/store'
 import VueCurrencyFilter from 'vue-currency-filter'
 import VueResource from 'vue-resource'
+import Snotify, {SnotifyPosition} from 'vue-snotify'
+
+import 'vue-snotify/styles/material.css'
+
 
 
 Vue.config.productionTip = false;
 Vue.use(VueResource);
 Vue.http.options.root = 'https://tomtests-38c25.firebaseio.com/'
-
+Vue.use(Snotify, {
+toast: {
+  position: SnotifyPosition.rightTop,
+    timeout: 3000,
+    newOnTop: false
+}
+});
+;
 
 Vue.use(VueCurrencyFilter,
   {
